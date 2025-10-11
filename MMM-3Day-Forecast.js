@@ -158,18 +158,6 @@ Module.register('MMM-3Day-Forecast', {
           forecastTextCell.className = 'forecastText2';
           forecastTextCell.innerHTML = this.forecast[i].conditions;
 
-          humidityIconCell = document.createElement('td');
-          humidityIconCell.className = 'detailIcon2';
-
-          humidityIcon = document.createElement('img');
-          humidityIcon.setAttribute('height', '15');
-          humidityIcon.setAttribute('width', '15');
-          humidityIcon.src = './modules/MMM-3Day-Forecast/images/humid.png';
-
-          humidityCell = document.createElement('td');
-          humidityCell.className = 'detailText2';
-          humidityCell.innerHTML = this.forecast[i].humid + '%';
-
           windIconCell = document.createElement('td');
           windIconCell.className = 'detailIcon2';
 
@@ -210,7 +198,6 @@ Module.register('MMM-3Day-Forecast', {
 
           tempIconCell.appendChild(tempIcon);
           rainIconCell.appendChild(rainIcon);
-          humidityIconCell.appendChild(humidityIcon);
           windIconCell.appendChild(windIcon);
 
           row1.appendChild(forecastIconCell);
@@ -222,8 +209,6 @@ Module.register('MMM-3Day-Forecast', {
           row2.appendChild(rainCell);
 
           row3.appendChild(forecastTextCell);
-          row3.appendChild(humidityIconCell);
-          row3.appendChild(humidityCell);
           row3.appendChild(windIconCell);
           row3.appendChild(windCell);
 
@@ -325,19 +310,6 @@ Module.register('MMM-3Day-Forecast', {
 
           rainBr = document.createElement('br');
 
-          // Build up the details regarding humidity %
-          humidIcon = document.createElement('img');
-          humidIcon.className = 'detailIcon';
-          humidIcon.setAttribute('height', '15');
-          humidIcon.setAttribute('width', '15');
-          humidIcon.src = './modules/MMM-3Day-Forecast/images/humid.png';
-
-          humidText = document.createElement('span');
-          humidText.className = 'normal';
-          humidText.innerHTML = this.forecast[i].humid + '%';
-
-          humidBr = document.createElement('br');
-
           // Build up the details regarding wind
           windIcon = document.createElement('img');
           windIcon.className = 'detailIcon';
@@ -377,9 +349,6 @@ Module.register('MMM-3Day-Forecast', {
           forecastDetail.appendChild(rainIcon);
           forecastDetail.appendChild(rainText);
           forecastDetail.appendChild(rainBr);
-          forecastDetail.appendChild(humidIcon);
-          forecastDetail.appendChild(humidText);
-          forecastDetail.appendChild(humidBr);
           forecastDetail.appendChild(windIcon);
           forecastDetail.appendChild(windText);
           //forecastDetail.appendChild(windBr);
