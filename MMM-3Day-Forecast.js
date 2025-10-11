@@ -82,13 +82,13 @@ Module.register('MMM-3Day-Forecast', {
           // Determine which day we are detailing
           switch (i) {
             case 0:
-              title = moment().format('MM Do, YYYY');
+              title = moment().format('MMM Do, YYYY');
               break;
             case 1:
-              title = moment().add(1, 'days').format('MM Do, YYYY');
+              title = moment().add(1, 'days').format('MMM Do, YYYY');
               break;
             case 2:
-              title = moment().add(2, 'days').format('MM Do, YYYY');
+              title = moment().add(2, 'days').format('MMM Do, YYYY');
               break;
           }
 
@@ -99,8 +99,8 @@ Module.register('MMM-3Day-Forecast', {
           forecastIconCell.setAttribute('rowspan', '2');
 
           forecastIcon = document.createElement('img');
-          forecastIcon.setAttribute('height', '50');
-          forecastIcon.setAttribute('width', '50');
+          forecastIcon.setAttribute('height', '25');
+          forecastIcon.setAttribute('width', '25');
           forecastIcon.src =
             './modules/MMM-3Day-Forecast/images/icon/' +
             this.forecast[i].icon +
@@ -246,15 +246,15 @@ Module.register('MMM-3Day-Forecast', {
           switch (i) {
             case 0:
               forecastClass = 'today';
-              title = moment().format('MM Do, YYYY');
+              title = moment().format('MMM Do, YYYY');
               break;
             case 1:
               forecastClass = 'tomorrow';
-              title = moment().add(1, 'days').format('MM Do, YYYY');
+              title = moment().add(1, 'days').format('MMM Do, YYYY');
               break;
             case 2:
               forecastClass = 'dayAfter';
-              title = moment().add(2, 'days').format('MM Do, YYYY');
+              title = moment().add(2, 'days').format('MMM Do, YYYY');
               break;
           }
 
@@ -268,8 +268,8 @@ Module.register('MMM-3Day-Forecast', {
 
           forecastIcon = document.createElement('img');
           forecastIcon.className = 'forecastIcon';
-          forecastIcon.setAttribute('height', '50');
-          forecastIcon.setAttribute('width', '50');
+          forecastIcon.setAttribute('height', '25');
+          forecastIcon.setAttribute('width', '25');
           forecastIcon.src =
             './modules/MMM-3Day-Forecast/images/icon/' +
             this.forecast[i].icon +
